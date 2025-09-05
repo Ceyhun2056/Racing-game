@@ -1,0 +1,176 @@
+body {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+.menu {
+    background: rgba(30,30,40,0.98);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    border-radius: 16px;
+    padding: 40px 40px 30px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-width: 350px;
+    animation: fadeIn 0.7s;
+}
+
+.menu-section {
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-section h3 {
+    color: #fff;
+    font-size: 1.3em;
+    margin: 0 0 10px 0;
+    text-align: center;
+    text-shadow: 1px 1px 4px #000;
+}
+
+.menu-section p {
+    color: #ccc;
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin: 5px 0;
+}
+.menu h1 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px #000a;
+}
+.menu-tip {
+    color: #bbb;
+    font-size: 1.1em;
+    margin-top: 10px;
+    text-align: center;
+}
+#startBtn, #menuBtn {
+    font-size: 1.2em;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 8px #0004;
+    margin-bottom: 10px;
+    transition: background 0.2s, transform 0.2s;
+}
+#startBtn:hover, #menuBtn:hover {
+    background: linear-gradient(90deg, #0072ff 0%, #00c6ff 100%);
+    transform: scale(1.05);
+}
+#game-container {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    box-shadow: 0 0 32px #000b;
+    background: linear-gradient(180deg, #444 0%, #222 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    animation: fadeIn 0.7s;
+}
+#game-container.hidden {
+    display: none;
+}
+#gameCanvas {
+    display: block;
+    background: #222;
+    border-radius: 12px;
+    box-shadow: 0 0 12px #0008;
+}
+#score {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: inherit;
+    text-shadow: 1px 1px 8px #000b;
+    letter-spacing: 1px;
+}
+
+.hud {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: #fff;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 8px #000b;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hud div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.power-up-icon {
+    width: 20px;
+    height: 20px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+}
+#game-over {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    border-radius: 16px;
+    animation: fadeIn 0.7s;
+}
+#game-over.hidden {
+    display: none;
+}
+#game-over h1 {
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 12px #000a;
+}
+#restartBtn {
+    font-size: 1.2em;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ff5858 0%, #f857a6 100%);
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 8px #0004;
+    margin-bottom: 10px;
+    transition: background 0.2s, transform 0.2s;
+}
+#restartBtn:hover {
+    background: linear-gradient(90deg, #f857a6 0%, #ff5858 100%);
+    transform: scale(1.05);
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Racing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu" class="menu">
+        <h1>🏎️ Turbo Racing</h1>
+        <div class="menu-stats">
+            <p>🏆 High Score: <span id="highScoreDisplay">0</span></p>
+        </div>
+        <button id="startBtn">🚀 Start Game</button>
+        <div class="controls-info">
+            <h3>🎮 Controls</h3>
+            <p>⬅️➡️ Change lanes</p>
+            <p>⬆️ Speed boost</p>
+            <p>⬇️ Slow down</p>
+        </div>
+        <div class="powerups-info">
+            <h3>✨ Power-ups</h3>
+            <p>🟡 Coins: +50 points</p>
+            <p>🔵 Shield: Temporary protection</p>
+            <p>🔴 Speed: Temporary boost</p>
+        </div>
+    </div>
+    <div id="game-container" class="hidden">
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        <div id="game-over" class="hidden">
+            <h1>💥 Game Over!</h1>
+            <div id="finalStats"></div>
+            <button id="restartBtn">🔄 Restart</button>
+            <button id="menuBtn">🏠 Menu</button>
+        </div>
+        <div id="score"></div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
