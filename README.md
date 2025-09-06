@@ -2,8 +2,6 @@
 
 A modern, feature-rich 2D racing game built with HTML5 Canvas, CSS3, and JavaScript. Experience arcade-style racing with stunning visual effects, power-ups, and progressive difficulty.
 
-![Racing Game Screenshot](web/screenshot.png)
-
 ## 🎮 Features
 
 ### 🚗 **Advanced Car System**
